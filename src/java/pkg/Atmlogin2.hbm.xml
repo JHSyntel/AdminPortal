@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 28, 2015 9:12:46 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="pkg.Atmlogin2" table="ATMLOGIN2" schema="SYSTEM">
+        <id name="uname" type="string">
+            <column name="UNAME" length="30" />
+            <generator class="assigned" />
+        </id>
+        <property name="upass" type="string">
+            <column name="UPASS" length="100" not-null="true" />
+        </property>
+        <property name="salt" type="string">
+            <column name="SALT" length="100" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
